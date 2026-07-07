@@ -17,31 +17,54 @@ and real-world software architecture rather than simply matching orders.
 (8)  Easy to Extend
 
 #  System Architecture:
-              Trader
+                    Trader
+
                  │
+
                  ▼
+
           Order Creation
+
                  │
+
                  ▼
+
             Order Book
+
       ┌──────────┴──────────┐
+
       ▼                     ▼
+
  Buy Orders            Sell Orders
+
       └──────────┬──────────┘
+
                  ▼
+
         Matching Engine
+
                  │
+
                  ▼
+
          Trade Execution
+
                  │
+
                  ▼
+
           Trade History
 #  Class Diagram:
-                    +----------------+
+
+
+                +----------------+
                     |     Trader     |
                     +----------------+
+
                            ▲
+
                            │
+
 +------------+     +-----------------+      +-----------+
 |   Stock    |◄────|      Order      |─────►| OrderSide |
 +------------+     +-----------------+      +-----------+
@@ -51,21 +74,28 @@ and real-world software architecture rather than simply matching orders.
      +----------------+      +----------------+
      |  LimitOrder    |      | MarketOrder    |
      +----------------+      +----------------+
+
                 │
                 ▼
+
           +---------------+
           |  OrderBook    |
           +---------------+
+
                 │
                 ▼
+                
        +--------------------+
        | MatchingEngine     |
        +--------------------+
+
                 │
                 ▼
+
            +-----------+
            |   Trade   |
            +-----------+
+
 
 # Matching Algorithm:
 
@@ -88,13 +118,13 @@ This is exactly how real exchanges work.
 ==> OOP Concepts Used:
 
 (1) Abstraction:
-
-==> Order is an abstract base class.
+Order is an abstract base class.
 The engine only works with
 Order* without caring whether it's MarketOrder or LimitOrder.
 
 (2) Inheritance:
-==>From Order to it inherits in MarketOrder and LimitOrder
+
+From Order to it inherits in MarketOrder and LimitOrder
 
 (3) Runtime Polymorphism:
 
@@ -106,11 +136,16 @@ Order* Each derived class provides its own implementation.
 Every class owns and protects its own data.
 
 (a) Trader manages trader information.
+
 (b) Stock manages stock information.
+
 (c) OrderBook manages all active orders.
+
 (d) MatchingEngine performs only matching.
 
-(5) Composition : An order can not exists without its stock and Trade we can say that it shows composition in this project.
+(5) Composition :
+
+An order can not exists without its stock and Trade we can say that it shows composition in this project.
 
 
 # Technologies : C++17,OOPS,STL 
@@ -151,8 +186,13 @@ Quantity : 50
 # Learning Outcomes:
 This project demonstrates:
 - Real-world OOP
+
 - Software Architecture
+
 - Low Level Design
+
 - Trading Engine Design
+
 - Clean Code Principles
+
 - Extensible System Design
