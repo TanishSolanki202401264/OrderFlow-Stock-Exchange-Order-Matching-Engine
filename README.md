@@ -1,5 +1,5 @@
 # 📈 OrderFlow
-### A Stock Exchange Order Matching Engine built in C++17
+### A Stock Exchange Order Matching Engine built in C++17:
 ==> A simplified but realistic stock exchange matching engine inspired by
 how exchanges like NSE and NASDAQ process buy and sell orders.
 
@@ -81,8 +81,9 @@ Every class owns and protects its own data.
 An order can not exists without its stock and Trade we can say that it shows composition in this project.
 
 
-# Technologies : C++17,OOPS,STL 
-#  Build:
+
+ #Build:
+ 
 ```bash
 mkdir build
 cd build
@@ -103,7 +104,7 @@ SELL
 247
 249
 
- MATCHING :
+# MATCHING :
 
 Trade Executed
 Buyer : Amit
@@ -118,6 +119,7 @@ Quantity : 50
 
 # Learning Outcomes:
 This project demonstrates:
+
 - Real-world OOP
 
 - Software Architecture
