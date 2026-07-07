@@ -78,18 +78,7 @@ Every class owns and protects its own data.
 
 (5) Composition :
 
-An order can not exists without its stock and Trade we can say that it shows composition in this project.
-
-
-
- #Build:
- 
-```bash
-mkdir build
-cd build
-cmake ..
-make
-./OrderFlow
+   An order can not exists without its stock and Trade we can say that it shows composition in this project.
 
 #  Sample Execution :
 
