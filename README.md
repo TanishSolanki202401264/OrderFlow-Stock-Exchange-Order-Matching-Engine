@@ -17,84 +17,20 @@ and real-world software architecture rather than simply matching orders.
 (8)  Easy to Extend
 
 #  System Architecture:
-                    Trader
-
-                 │
-
-                 ▼
-
-          Order Creation
-
-                 │
-
-                 ▼
-
-            Order Book
-
-      ┌──────────┴──────────┐
-
-      ▼                     ▼
-
- Buy Orders            Sell Orders
-
-      └──────────┬──────────┘
-
-                 ▼
-
-        Matching Engine
-
-                 │
-
-                 ▼
-
-         Trade Execution
-
-                 │
-
-                 ▼
-
-          Trade History
-#  Class Diagram:
-
-
-                +----------------+
-                    |     Trader     |
-                    +----------------+
-
-                           ▲
-
-                           │
-
-+------------+     +-----------------+      +-----------+
-|   Stock    |◄────|      Order      |─────►| OrderSide |
-+------------+     +-----------------+      +-----------+
-                         ▲
-             ┌───────────┴───────────┐
-             │                       │
-     +----------------+      +----------------+
-     |  LimitOrder    |      | MarketOrder    |
-     +----------------+      +----------------+
-
-                │
-                ▼
-
-          +---------------+
-          |  OrderBook    |
-          +---------------+
-
-                │
-                ▼
-                
-       +--------------------+
-       | MatchingEngine     |
-       +--------------------+
-
-                │
-                ▼
-
-           +-----------+
-           |   Trade   |
-           +-----------+
+    Trader
+   │
+   ▼
+Create Order
+   │
+   ▼
+Order Book
+   │
+   ▼
+Matching Engine
+   │
+   ├── Match Found ───► Execute Trade ───► Trade History
+   │
+   └── No Match ──────► Order Stays in Order Book               
 
 
 # Matching Algorithm:
