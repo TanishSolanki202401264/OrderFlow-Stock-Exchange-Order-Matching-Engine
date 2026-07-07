@@ -17,20 +17,17 @@ and real-world software architecture rather than simply matching orders.
 (8)  Easy to Extend
 
 #  System Architecture:
-    Trader
-   │
-   ▼
-Create Order
-   │
-   ▼
-Order Book
-   │
-   ▼
-Matching Engine
-   │
-   ├── Match Found ───► Execute Trade ───► Trade History
-   │
-   └── No Match ──────► Order Stays in Order Book               
+ Step 1:  Trader
+ 
+Step 2:  Create Order
+  
+Step 3:  Order Book
+    
+Step 4: Matching Engine :
+
+ (a) Match Found ───► Execute Trade ───► Trade History
+   
+ (b) No Match ──────► Order Stays in Order Book               
 
 
 # Matching Algorithm:
