@@ -96,14 +96,22 @@ SELL
 # MATCHING :
 
 Trade Executed
-Buyer : Amit
+Buyer : Tanish
+
 Seller : Kishan
+
 Price : 245
+
 Quantity : 30
+
 Trade Executed
-Buyer : Amit
+
+Buyer :Tanish
+
 Seller : Rahul
+
 Price : 247
+
 Quantity : 50
 
 # Learning Outcomes:
