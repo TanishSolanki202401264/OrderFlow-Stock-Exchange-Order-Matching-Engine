@@ -82,15 +82,22 @@ Every class owns and protects its own data.
 
 #  Sample Execution :
 
-text
  BEFORE MATCHING
+ 
 BUY
+
 252
+
 250
+
 248
+
 SELL
+
 245
+
 247
+
 249
 
 # MATCHING :
